@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkHub</title>
+    <link rel="website icon" href="https://img.freepik.com/premium-vector/reach-best-job-seekers-logo-design-template_448617-242.jpg?semt=ais_hybrid" type="png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+    background-color: #ffffff;
+}
+header{
+    background-color: rgb(0, 60, 116);
+    color: rgb(255, 232, 232);
+    text-align: center;
+    padding: 34px;
+}
+#menu1{
+position: relative;
+display: block;
+width: 100%;
+height: auto;
+z-index: 10;
+color: black;
+}
+
+#menu1 ul{
+position: relative;
+display: block;
+margin: 0px;
+padding: 0px;
+width: 100%;
+height: auto;
+list-style: none;
+}
+
+#menu1 > ul::after{
+display: block;
+width: 100%;
+height: 0px;
+clear: both;
+content: " ";
+}
+
+#menu1 ul li{
+position: relative;
+display: block;
+float: left;
+width: auto;
+height: auto;
+}
+
+#menu1 ul li a{
+display: block;
+padding: 9px 25px 0px 25px;
+font-size: 14px;
+line-height: 1.3em;
+text-decoration: none;
+font-weight: bold;
+text-transform: uppercase;
+height: 36px;
+box-sizing: border-box;
+color: rgb(0, 0, 0);
+}
+
+#menu1 ul li ul{
+position: absolute;
+top: 36px;
+left: 0px;
+display: none;
+width: 200px;
+background: #38b6ff;
+}
+
+#menu1 ul li:hover ul{
+display: block;
+}
+
+#menu1 ul li ul li{
+float: none;
+width: 100%;
+}
+
+#menu1 ul li ul li a{
+display: block;
+text-transform: none;
+height: auto;
+padding: 7px 25px;
+width: 100%;
+box-sizing: border-box;
+border-top: 1px solid #000000;
+color: rgb(0, 0, 0);
+}
+
+#menu1 ul li ul li:first-child a{
+border-top: 0px;
+color: red
+}
+
+#menu1 ul li ul li:last-child a{
+border-top: 0px;
+color: red
+}
+#contacts-menu ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+}
+
+#contacts-menu li {
+position: relative;
+display: inline-block;
+margin: 0 10px;
+}
+
+.contact-details {
+display: none;
+background-color: #fff;
+border: 1px solid #ddd;
+padding: 10px;
+position: absolute;
+top: 30px; 
+left: 0;
+min-width: 150px;
+}
+
+#contacts-menu li:hover .contact-details {
+display: block;
+}
+h2{
+color: #ddd;
+text-align: center;
+}
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+.contact-menu {
+    background-color: #178ea8;
+    padding: 15px;
+    border-radius: 10px;
+    width: 200px;
+}
+.contact-menu img {
+    width: 100%;
+    border-radius: 10px;
+}
+h1{
+    color: #ddd;
+}
+.m1{
+    display: inline-block;
+    background-color: silver;
+    color: #ffffff;
+}
+.o-nas-text {
+    display: inline-block;
+    max-width: 600px; /* Ограничение ширины для удобочитаемости */
+    margin: 100px auto; /* Центрирование */
+    text-align: justify; /* Выравнивание по ширине */
+    line-height: 1.5; /* Улучшение читаемости */
+    background-color: rgb(0, 157, 255);
+    color: white;
+    max-height: 190vh;
+    width: 600px;
+}
+header {
+    background: #003366;
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+.job-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+}
+.contact-form {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    margin: auto;
+}
+.orange {
+    color: #ff7a01;
+  }
+  
+  .form-container {
+    max-width: 700px;
+    margin: 30px;
+    background-color: #001925;
+    padding: 30px;
+    border-left: 5px solid #ff7a01;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+  }
+  
+  .heading {
+    display: block;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+  }
+  
+  .form-container .form .input {
+    color: #87a4b6;
+    width: 100%;
+    background-color: #002733;
+    border: none;
+    outline: none;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+    border-left: 1px solid transparent;
+  }
+  
+  .form-container .form .input:focus {
+    border-left: 5px solid #ff7a01;
+  }
+  
+  .form-container .form .textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: #013747;
+    color: #ff7a01;
+    font-weight: bold;
+    resize: none;
+    max-height: 150px;
+    margin-bottom: 20px;
+    border-left: 1px solid transparent;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .form-container .form .textarea:focus {
+    border-left: 5px solid #ff7a01;
+  }
+  
+  .form-container .form .button-container {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .form-container .form .button-container .send-button {
+    flex-basis: 70%;
+    background: #ff7a01;
+    padding: 10px;
+    color: #001925;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid transparent;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .form-container .form .button-container .send-button:hover {
+    background: transparent;
+    border: 1px solid #ff7a01;
+    color: #ff7a01;
+  }
+  
+  .form-container .form .button-container .reset-button-container {
+    filter: drop-shadow(1px 1px 0px #ff7a01);
+    flex-basis: 30%;
+  }
+  
+  .form-container .form .button-container .reset-button-container .reset-button {
+    position: relative;
+    text-align: center;
+    padding: 10px;
+    color: #ff7a01;
+    font-weight: bold;
+    background: #001925;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%);
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .form-container .form .button-container .reset-button-container .reset-button:hover {
+    background: #ff7a01;
+    color: #001925;
+  }
+
+    </style>
+    <script src="script.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+          </li>
+    <h2>Вакансии по запросу "Охранник"</h2>
+    <div class="container">
+        <h2>Доступные вакансии</h2>
+        <div class="row">
+            <div class="col-md-4 job-card">
+                <h3>Охранник магазина "GUCCI"</h3>
+                <p>Зарплата: 80 000 ₽</p>
+                <p>График: Полный день</p>
+                <button class="btn btn-primary">Откликнуться</button>
+            </div>
+            <div class="col-md-4 job-card">
+                <h3>Охранник магазина "ЦУМ"</h3>
+                <p>Зарплата: 90 000 ₽</p>
+                <p>График: Сменный</p>
+                <button class="btn btn-primary">Откликнуться</button>
+            </div>
+            <div class="col-md-4 job-card">
+                <h3>Охранник магазина "Спорт Мастер"</h3>
+                <p>Зарплата: 100 000 ₽</p>
+                <p>График: Гибкий</p>
+                <button class="btn btn-primary">Откликнуться</button>
+            </div>
+            <div class="col-md-4 job-card">
+                <h3>Охранник торгового центра</h3>
+                <p>Зарплата: 50 000 ₽</p>
+                <p>График: Свободный</p>
+                <button class="btn btn-primary">Откликнуться</button>
+            </div>
+        </div>
+    </div>
